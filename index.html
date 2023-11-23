@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<title>Football tournaments</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+	<main>
+		<nav id="navbar" class="navbar fixed-top">
+			<div class="container-xl">
+				<div class="d-flex align-items-center">
+					<h1 class="m-0"><a href="./index.html">Arena</a></h1>
+					<div class="dropdown ms-3 d-md-none">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							☰
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="./page1.html">Champion's League</a></li>
+							<li><a class="dropdown-item" href="./page2.html">Europe League</a></li>
+							<li><a class="dropdown-item" href="./page3.html">Conference League</a></li>
+						</ul>
+					</div>
+					<a class="navbar-brand d-none d-md-inline mx-5" href="./page1.html">Champion's League</a>
+					<a class="navbar-brand d-none d-md-inline me-5" href="./page2.html">Europe League</a>
+					<a class="navbar-brand d-none d-md-inline" href="./page3.html">Conference League</a>
+				</div>
+				<a class="navbar-brand d-inline-block" href="./index.html" id="playSoundLink">
+					<img id="icon" src="./img/logo.png" width="50" height="50" class="d-inline-block align-text-top">
+				  </a>				
+			</div>
+		</nav>
+
+		<audio id="myAudio">
+			<source src="videos/sound.mp3" type="audio/mp3">
+			Your browser does not support the audio element.
+		</audio>
+
+		<script>
+			$(document).ready(function() {
+			  // Add a click event listener to the link
+			  $("#playSoundLink").on("click", function() {
+				// Play the audio
+				$("#myAudio")[0].play();
+				return false; // Prevent the link from navigating to a new page
+			  });
+			});
+		</script>
+
+		<div class="empty"></div>
+		<div id="carouselExampleIndicators" class="carousel slide">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="./img/preview1.jpeg" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="./img/preview2.jpg" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="./img/preview3.jpg" class="d-block w-100">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<div class="container-xl">
+			<div class="shortWidth">
+				<h1 class="text-center pt-5 ">Welcome to Football World!</h1>
+				<p>We are pleased to welcome you to the virtual residence of real football passions. Arena is not just a website, it is an online platform where every football fan will find something special.</p>
+				<p>Football is not just a sport, it is magic, inspiration and a story during which millions of hearts beat in unison. Born on green fields, football has become an integral part of culture, connecting generations and continents.</p>
+			</div>
+			<div class="mt-5">
+				<img src="./img/photo1.jpg" class="img-fluid">
+			</div>
+			<h2 class="text-center my-4">History of Football</h2>
+			<h4>Emergence and Early Steps:</h4>
+			<p>The first folk ball games were simple and without rules, but they laid the foundations of what we call football. In different parts of the world, from China to Ancient Egypt, there were different versions of this spectacular game.</p>
+			<h4>Formation of Rules:</h4>
+			<p>From the mid-19th century, efforts began in England to establish common rules for football. Various schools and clubs contributed and the English Football Society was formed in 1863. This was the starting point for the creation of unified rules that became the basis of modern football.</p>
+			<div class="row flex-row-reverse">
+				<div class="col-4">
+					<img src="./img/photo2.png" class="img-fluid">
+				</div>
+				<div class="col-8">
+					<h4>First Tournaments:</h4>
+					<p>Some time after the rules were standardized, the first national and international tournaments began to be held. The FA (Football Association) Cup became the first national tournament in 1871, followed by Olympic tournaments and finally the FIFA World Cup.</p>
+					<h4>Stars and Legends:</h4>
+					<p>Football has produced its own stars - legendary players whose names are written in history. From Pele to Maradona, from Platini to Ronaldo, these football virtuosos have not only won titles, but also captured the hearts of fans around the world.</p>
+				</div>
+				<h4>Football Today:</h4>
+					<p>Today football is not only a sport, but also a world culture. Millions of fans around the world gather in front of television screens, in stadiums and in bars to experience together the joy of victories and the bitterness of defeats.</p>
+				
+			</div>
+		</div>
+
+	</main>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<footer>
+		<div class="container-xl">
+			<p>The Republic of Kazakhstan, Astana city 020000, Turan 48 Avenue, Astana Arena</p>
+			<p>Creator: Olzhas Nurkaidar</p>
+			<p>Email: <a href="mailto:olzhiknurik0770@gmail.com">olzhiknurik0770@gmail.com</a></p>
+			<p>Phone number: +7(777) 333 77 33</p>
+		</div>
+	</footer>
+</body>
+</html>

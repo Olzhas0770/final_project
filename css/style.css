@@ -1,0 +1,27 @@
+@font-face {
+	font-family: josefin;
+	src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+.empty{
+	height: 70px;
+}
+main {
+	overflow: hidden;
+}
+.shortWidth{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+#navbar{
+	background-color: #fff;
+}
+h1,h2,h3{
+	font-family: josefin;
+}
+p{
+	font-size: 20px;
+}
+a{
+	color: #000 !important;
+	text-decoration: none !important;
+}

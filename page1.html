@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-qOEFn1rZG4V6oWoQ4xREfF0YF2E01pwKhf2Ll9PS6ST7Zvf0kGcHVGlK1+Pggzv6Wn7K5ySu8RzbhDrREjNhDA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<title>Football tournaments</title>
+	<style>
+		#realMadridBtn {
+		  background-image: url('img/rm.ico');
+		}
+	
+		#barcelonaBtn {
+		  background-image: url('img/bc.ico');
+		}
+	
+		#bayernMunichBtn {
+		  background-image: url('img/bm.ico');
+		}
+	
+		.team-btn {
+		  background-size: 20px;
+		  background-repeat: no-repeat;
+		  background-position: left center;
+		  padding-left: 30px; /* Adjust as needed based on the icon size */
+		}
+	  </style>
+</head>
+<body>
+	<main>
+		<nav id="navbar" class="navbar fixed-top">
+			<div class="container-xl">
+				<div class="d-flex align-items-center">
+					<h1 class="m-0"><a href="./index.html">Arena</a></h1>
+					<div class="dropdown ms-3 d-md-none">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							☰
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="./page1.html">Champion's League</a></li>
+							<li><a class="dropdown-item" href="./page2.html">Europe League</a></li>
+							<li><a class="dropdown-item" href="./page3.html">Conference League</a></li>
+						</ul>
+					</div>
+					<a class="navbar-brand d-none d-md-inline mx-5" href="./page1.html">Champion's League</a>
+					<a class="navbar-brand d-none d-md-inline me-5" href="./page2.html">Europe League</a>
+					<a class="navbar-brand d-none d-md-inline" href="./page3.html">Conference League</a>
+				</div>
+				<a class="navbar-brand d-inline-block" href="./index.html" id="playSoundLink">
+					<img id="icon" src="./img/logo.png" width="50" height="50" class="d-inline-block align-text-top">
+				  </a>	
+			</div>
+		</nav>
+
+		<div class="empty"></div>
+	</main>
+
+	<audio id="myAudio">
+		<source src="videos/sound.mp3" type="audio/mp3">
+		Your browser does not support the audio element.
+	</audio>
+
+	<script>
+		$(document).ready(function() {
+		  // Add a click event listener to the link
+		  $("#playSoundLink").on("click", function() {
+			// Play the audio
+			$("#myAudio")[0].play();
+			return false; // Prevent the link from navigating to a new page
+		  });
+		});
+	</script>
+
+	<div class="container col-xxl-8 px-4 py-5">
+		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+		  <div class="col-10 col-sm-8 col-lg-6">
+			<img src="img/chmp_league.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+		  </div>
+		  <div class="col-lg-6">
+			<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Champion's League</h1>
+			<p class="lead">The UEFA Champions League (previously known as the European Cup, abbreviated as UCL, or sometimes, UEFA CL) is an annual club association football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs.</p>
+			<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+			  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a href="index.html" style="text-decoration: none;">Main Page</a></button>
+			  <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="page2.html" style="text-decoration: none;">Next League</a></button>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	
+	<div class="container my-5">
+		<div class="position-relative p-5 text-center bg-body border border-dashed rounded-5">
+		  <button type="button" class="position-absolute top-0 end-0 p-3 m-3 btn-close bg-secondary bg-opacity-10 rounded-pill" aria-label="Close"></button>
+		  <svg class="bi mt-5 mb-3" width="48" height="48"><use xlink:href="#check2-circle"></use></svg>
+		  <h1 class="text-body-emphasis">Top 3 Teams in History</h1>
+		  <p class="col-lg-6 mx-auto mb-4">
+			These three teams embody the spirit of competition in the UEFA Champions League, each contributing a unique flavor to the tournament's rich history. Their journeys have been marked by memorable moments, iconic players, and a commitment to achieving greatness on the grandest stage of European football.
+			</p>
+			 <!-- Buttons -->
+			<button id="realMadridBtn" class="btn btn-primary px-5 mb-5 team-btn" type="button" data-toggle="modal" data-target="#realMadridModal">
+				Real Madrid CF
+			</button>
+
+			<button id="barcelonaBtn" class="btn btn-primary px-5 mb-5 team-btn" type="button" data-toggle="modal" data-target="#barcelonaModal">
+				FC Barcelona
+			</button>
+
+			<button id="bayernMunichBtn" class="btn btn-primary px-5 mb-5 team-btn" type="button" data-toggle="modal" data-target="#bayernMunichModal">
+				FC Bayern Munich
+			</button>
+		</div>
+	</div>
+
+	<!-- Real Madrid Modal -->
+	<div class="modal fade" id="realMadridModal" tabindex="-1" role="dialog" aria-labelledby="realMadridModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="realMadridModalLabel">Real Madrid CF</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <!-- Add content for Real Madrid modal -->
+			  Real Madrid stands as one of the most successful and storied clubs in Champions League history. Based in Madrid, Spain, the club has clinched the prestigious title a record number of times. Known for their attacking prowess, legendary players, and a tradition of success, Real Madrid has consistently been a force to be reckoned with in European football.
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	  <!-- FC Barcelona Modal -->
+	  <div class="modal fade" id="barcelonaModal" tabindex="-1" role="dialog" aria-labelledby="barcelonaModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="barcelonaModalLabel">FC Barcelona</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				Hailing from Catalonia, Spain, FC Barcelona has etched its name in Champions League history with a distinctive style of play known as "tiki-taka." Renowned for its youth development system, La Masia, Barcelona has produced some of the greatest football talents. The club's success has been marked by a combination of skillful play, iconic players like Lionel Messi, and multiple Champions League triumphs.	
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	  <!-- FC Bayern Munich Modal -->
+	  <div class="modal fade" id="bayernMunichModal" tabindex="-1" role="dialog" aria-labelledby="bayernMunichModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="bayernMunichModalLabel">FC Bayern Munich</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <!-- Add content for FC Bayern Munich modal -->
+			  Bayern Munich, based in Germany, has been a dominant force in European football. Renowned for their meticulous approach, strong defense, and clinical attacking, Bayern has consistently reached the latter stages of the Champions League. With a blend of experienced players and emerging talents, the club has earned a reputation for efficiency and success on the continental stage.			</div>
+		  </div>
+		</div>
+	  </div>
+
+
+
+
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<footer>
+		<div class="bg-light container-xl">
+			<p>The Republic of Kazakhstan, Astana city 020000, Turan 48 Avenue, Astana Arena</p>
+			<p>Creator: Olzhas Nurkaidar</p>
+			<p>Email: <a href="mailto:olzhiknurik0770@gmail.com">olzhiknurik0770@gmail.com</a></p>
+			<p>Phone number: +7(777) 333 77 33</p>
+		</div>
+	</footer>
+</body>
+</html>
